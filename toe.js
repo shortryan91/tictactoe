@@ -2,30 +2,27 @@
 var player1 = "X";
 var player2 = "O";
 var currentPlayer = player1;
-
 var board = ["", "", "", "", "", "", "", "", ""];
 
-// make a move
+
+// game loop
 var move = function(event) {
-  if (currentPlayer === player1) {
 
-    event.target.textContent = "X"
-  } else if (currentPlayer === player2) {
-    event.target.textContent = "O"
-  }
-  // logBoard()
-    winner()
-    playersTurn()
+  // make a move
+  event.target.textContent = currentPlayer;
+  // event.target.style.backgroundImage = 'url("https://assets.merriam-webster.com/mw/images/article/art-wap-article-main/puppy-3143-7cfb4d6a42dfc7d9d1ae7e23126279e8@1x.jpg")';
+  var index = event.target.id.slice(-1);
+  board[ Number(index) ] = currentPlayer;
 
-}
+  // check winner
+  winner()
 
-var logBoard = function() {
-  board[i]
-
+  // switch turns
+  switchTurn();
 }
 
 //switch player
-var playersTurn = function() {
+var switchTurn = function() {
   if (player1 === currentPlayer) {
       currentPlayer = player2;
       console.log("Player Two's Turn")
@@ -34,14 +31,60 @@ var playersTurn = function() {
       console.log("Player One's turn")
   }
 }
-
-// check who has won
-var winner = function() {
-  if(board[5] === player1) {
-    console.log('winner');
-  }
-}
-
 var parent = document.querySelector('#container')
 
 parent.addEventListener('click', move);
+
+// check who has won
+var winner = function() {
+  // "X" wins
+  if(board[0] === 'X' && board[1] === 'X' && board[2] === 'X') {
+    console.log('winner');
+  }
+  if(board[3] === 'X' && board[4] === 'X' && board[5] === 'X') {
+    console.log('winner');
+  }
+  if(board[6] === 'X' && board[7] === 'X' && board[8] === 'X') {
+    console.log('winner');
+  }
+  if(board[0] === 'X' && board[3] === 'X' && board[6] === 'X') {
+    console.log('winner');
+  }
+  if(board[1] === 'X' && board[4] === 'X' && board[7] === 'X') {
+    console.log('winner');
+  }
+  if(board[2] === 'X' && board[5] === 'X' && board[8] === 'X') {
+    console.log('winner');
+  }
+  if(board[0] === 'X' && board[4] === 'X' && board[8] === 'X') {
+    console.log('winner');
+  }
+  if(board[2] === 'X' && board[4] === 'X' && board[6] === 'X') {
+    console.log('winner');
+  }
+  // "O" wins
+  if(board[0] === 'O' && board[1] === 'O' && board[2] === 'O') {
+    console.log('winner');
+  }
+  if(board[3] === 'O' && board[4] === 'O' && board[5] === 'O') {
+    console.log('winner');
+  }
+  if(board[6] === 'O' && board[7] === 'O' && board[8] === 'O') {
+    console.log('winner');
+  }
+  if(board[0] === 'O' && board[3] === 'O' && board[6] === 'O') {
+    console.log('winner');
+  }
+  if(board[1] === 'O' && board[4] === 'O' && board[7] === 'O') {
+    console.log('winner');
+  }
+  if(board[2] === 'O' && board[5] === 'O' && board[8] === 'O') {
+    console.log('winner');
+  }
+  if(board[0] === 'O' && board[4] === 'O' && board[8] === 'O') {
+    console.log('winner');
+  }
+  if(board[2] === 'O' && board[4] === 'O' && board[6] === 'O') {
+    console.log('winner');
+  }
+}
