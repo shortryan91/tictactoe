@@ -11,23 +11,20 @@ var won = false;
 // game loop
 var move = function(event) {
 
-  if (event.target.textContent ===  "") {
+  if (event.target.textContent ===  "" && !won) {
     // make a move
     event.target.textContent = currentPlayer;
     var index = event.target.id.slice(-1);
     board[ Number(index) ] = currentPlayer;
 
     winner()
+
     switchTurn();
     counter = counter + 1;
   }
 
 }
 
-
-if ( won === true) {
-  return
-}
 
 //switch player
 var switchTurn = function() {
@@ -49,27 +46,35 @@ var winner = function() {
   //  wins
   if(board[0] === currentPlayer && board[1] === currentPlayer && board[2] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if (board[3] === currentPlayer && board[4] === currentPlayer && board[5] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if (board[6] === currentPlayer && board[7] === currentPlayer && board[8] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if (board[0] === currentPlayer && board[3] === currentPlayer && board[6] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if (board[1] === currentPlayer && board[4] === currentPlayer && board[7] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if (board[2] === currentPlayer && board[5] === currentPlayer && board[8] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if (board[0] === currentPlayer && board[4] === currentPlayer && board[8] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if (board[2] === currentPlayer && board[4] === currentPlayer && board[6] === currentPlayer) {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    won = true;
   }
   else if ( counter === 9 ) {
    document.querySelector('header').textContent = "DRAW";
