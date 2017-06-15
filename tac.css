@@ -18,6 +18,13 @@
   font-family: 'mogra', cursive;
 
 }
+#button {
+  font-size: 30px;
+  border-radius: 5px;
+  color: black;
+  background-color: chocolate;
+  border-color: chocolate;
+}
 
 #iconContainer{
   width: 10%;
