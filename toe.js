@@ -1,26 +1,33 @@
 
-var player1 = "O";
-var player2 = "X";
+var player1 = "X";
+var player2 = "O";
 var currentPlayer = player1;
 var board = ["", "", "", "", "", "", "", "", ""];
 var counter = 0;
-
+var won = false;
 
 
 
 // game loop
 var move = function(event) {
+
   if (event.target.textContent ===  "") {
+    // make a move
     event.target.textContent = currentPlayer;
+    var index = event.target.id.slice(-1);
+    board[ Number(index) ] = currentPlayer;
+
+    winner()
     switchTurn();
     counter = counter + 1;
   }
-  var index = event.target.id.slice(-1);
-  board[ Number(index) ] = currentPlayer;
-  winner()
+
 }
 
 
+if ( won === true) {
+  return
+}
 
 //switch player
 var switchTurn = function() {
