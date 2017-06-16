@@ -19,3 +19,6 @@ It came down to a couple simple steps in which to then execute into code
 - switch turn if no winner
 
 From these steps the game was built out.
+
+link to the working game
+file:///Users/ryanshort/wdi/project_1/index.html

@@ -26,12 +26,11 @@
   border-radius: 8px;
   color: black;
   background-color: chocolate;
-
   border: 10px groove red;
 }
 
+
 #iconContainer{
-  /*background-image: url("");*/
   border: 8px groove green;
   display: inline-block;
   border-radius: 15px;
@@ -83,21 +82,3 @@
 #container {
   background-image: url('https://cdn5.f-cdn.com/contestentries/44321/3978939/526efa7f16ab4_thumb900.jpg');
 }
-
-
-
-/*#container section:nth-child(n-3) {
-  border-top: 0px;
-}
-
-#container section:nth-child(3n+1) {
-  border-left: 0px;
-}
-
-#container section:nth-child(n+7) {
-  border-bottom: 0px;
-}
-
-#container section:nth-child(3n+3) {
-  border-right: 0px;
-}*/
