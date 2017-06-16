@@ -3,57 +3,86 @@
 }
 
 #background {
-  background-image: url("https://st.depositphotos.com/1529768/3913/i/950/depositphotos_39133407-stock-photo-baking-flour-texture-background.jpg");
+  background-image: url("https://image.freepik.com/free-vector/circus-tent-background_23-2147597864.jpg");
   min-height: 3em;
-  min-width: 920px;
+  min-width: 800px;
   background-position: center;
   background-size: cover;
 }
 
 #mainHeading{
-  font-size: 46px;
+  padding-top: 40px;
+  font-size: 80px;
   text-align: center;
-  color: black;
+  color: rgb(22,108,247);
   word-spacing: 50px;
-  font-family: 'mogra', cursive;
+  font-family: 'Luckiest Guy', cursive;
+  text-shadow: 4px 4px black;
 
 }
 #button {
-  font-size: 30px;
-  border-radius: 5px;
+  margin-left: 30px;
+  font-size: 40px;
+  border-radius: 8px;
   color: black;
   background-color: chocolate;
-  border-color: chocolate;
+
+  border: 10px groove red;
 }
 
 #iconContainer{
-  width: 10%;
-  height: 600px;
-  /*border: 2px solid black;*/
+  /*background-image: url("");*/
+  border: 8px groove green;
   display: inline-block;
-  vertical-align: top;
+  border-radius: 15px;
+  width: 340px;
+  height: 270px;
+  margin-bottom: -15px;
+  margin-top: 20px;
+
+
+}
+#mole {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 10px 10px 5px green;
+
 }
 
+
+
 #container {
-  height: 600px;
-  width: 80%;
+  height: 450px;
+  width: 450px;
   display: inline-block;
-  font-size: 0;
-  /*border: 2px solid black;*/
+  margin-left: 50px;
+
+
+
 
 }
 
 #container section {
-  font-size: 10rem;
-  height: 30.3333%;
-  width: 33.3333%;
-  border: 1px solid black;
+
+  font-size: 8rem;
+  height: 33.33333%;
+  width: 33.33333%;
   display: inline-block;
   vertical-align: top;
   text-align: center;
+  border-radius: 5px;
+  border: 4px dashed black;
+  border-radius: 4px;
 }
 
-#container section:nth-child(n-3) {
+#container {
+  background-image: url('https://cdn5.f-cdn.com/contestentries/44321/3978939/526efa7f16ab4_thumb900.jpg');
+}
+
+
+/*#container section:nth-child(n-3) {
   border-top: 0px;
 }
 
@@ -67,4 +96,4 @@
 
 #container section:nth-child(3n+3) {
   border-right: 0px;
-}
+}*/

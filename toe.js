@@ -1,11 +1,17 @@
 
-var player1 = "X";
-var player2 = "O";
+var player1 = {
+  name: "moles",
+  image: 'url(whackthatmole_logo.png)'
+}
+
+var player2 = {
+  name: "hammer",
+  image: "url(hammer.png)"
+}
 var currentPlayer = player1;
 var board = ["", "", "", "", "", "", "", "", ""];
 var counter = 0;
 var won = false;
-
 
 
 // game loop
@@ -13,7 +19,8 @@ var move = function(event) {
 
   if (event.target.textContent ===  "" && !won) {
     // make a move
-    event.target.textContent = currentPlayer;
+    // event.target.textContent = currentPlayer;
+    event.target.style.backgroundImage = currentPlayer;
     var index = event.target.id.slice(-1);
     board[ Number(index) ] = currentPlayer;
 
