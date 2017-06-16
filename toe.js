@@ -83,7 +83,7 @@ var winner = function() {
     document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
-  else if ( counter === 9 ) {
+  else if ( counter === 8 ) {
    document.querySelector('header').textContent = "DRAW";
   }
 }
