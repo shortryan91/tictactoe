@@ -1,7 +1,7 @@
 
 var player1 = {
   name: "moles",
-  image: 'url(whackthatmole_logo.png)'
+  image: 'url(mole.png)'
 }
 
 var player2 = {
@@ -17,10 +17,10 @@ var won = false;
 // game loop
 var move = function(event) {
 
-  if (event.target.textContent ===  "" && !won) {
+  if (event.target.style.backgroundImage ===  "" && !won) {
     // make a move
     // event.target.textContent = currentPlayer;
-    event.target.style.backgroundImage = currentPlayer;
+    event.target.style.backgroundImage = currentPlayer.image;
     var index = event.target.id.slice(-1);
     board[ Number(index) ] = currentPlayer;
 
@@ -52,35 +52,35 @@ parent.addEventListener('click', move);
 var winner = function() {
   //  wins
   if(board[0] === currentPlayer && board[1] === currentPlayer && board[2] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if (board[3] === currentPlayer && board[4] === currentPlayer && board[5] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if (board[6] === currentPlayer && board[7] === currentPlayer && board[8] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if (board[0] === currentPlayer && board[3] === currentPlayer && board[6] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if (board[1] === currentPlayer && board[4] === currentPlayer && board[7] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if (board[2] === currentPlayer && board[5] === currentPlayer && board[8] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if (board[0] === currentPlayer && board[4] === currentPlayer && board[8] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if (board[2] === currentPlayer && board[4] === currentPlayer && board[6] === currentPlayer) {
-    document.querySelector('header').textContent = "PLAYER " + currentPlayer + " WINS";
+    document.querySelector('header').textContent = "PLAYER " + currentPlayer.name + " WINS";
     won = true;
   }
   else if ( counter === 9 ) {

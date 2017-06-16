@@ -75,11 +75,15 @@
   border-radius: 5px;
   border: 4px dashed black;
   border-radius: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #container {
   background-image: url('https://cdn5.f-cdn.com/contestentries/44321/3978939/526efa7f16ab4_thumb900.jpg');
 }
+
 
 
 /*#container section:nth-child(n-3) {
